@@ -1,0 +1,57 @@
+llm:
+  provider: "openrouter"
+  model: "openai/gpt-oss-20b:free"
+  temperature: 0.7
+  max_tokens: 4000
+  api_key: "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"
+  
+  local:
+    base_url: "http://localhost:11434"
+    model_name: "mistral"
+
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4"
+
+  openrouter:
+    api_key: "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"
+    base_url: "https://openrouter.ai/api/v1"
+    model: "openai/gpt-oss-20b:free"
+    referer: "https://your-site.com"
+    title: "College RAG Assistant"
+
+vector_db:
+  type: "chromadb"
+  persist_directory: "./vector_db"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  chunk_size: 1000
+  chunk_overlap: 200
+  similarity_threshold: 0.2
+
+web_search:
+  enabled: true
+  providers: ["duckduckgo", "serpapi"]
+  max_results: 5
+  search_timeout: 10
+  serpapi_key: "${SERPAPI_KEY}"
+
+ui:
+  enable_web_search_toggle: true
+  chat_history_limit: 50
+  enable_file_upload: true
+
+logging:
+  level: "INFO"
+  file: "./logs/rag_assistant.log"
+
+security:
+  max_requests_per_minute: 60
+  enable_rate_limiting: true
+  session_timeout: 3600
+
+paths:
+  documents: "./data/documents"
+  processed: "./data/processed"
+  cache: "./data/cache"
+  logs: "./logs"
+  models: "./models"
