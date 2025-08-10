@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="ERAGA_LOGO.png" alt="ERAGA Logo" width="150"/>
-  <h1>ERAGA: Enhanced RAG Assistant for General Academics</h1>
+  <h1>ERAGA: Educational RAG Assistant </h1
 
 
 <p>
@@ -20,7 +20,7 @@
 
 ## Overview
 
-**ERAGA** (Enhanced RAG Assistant for General Academics) is a Retrieval-Augmented Generation (RAG) chatbot designed to act like ChatGPT **but powered by your own documents**. Documents are ingested and converted to a vector database (ChromaDB by default), so the assistant answers questions from your custom knowledge base plus optional web search.
+**ERAGA** (Educational RAG Assistant) is a Retrieval-Augmented Generation (RAG) chatbot designed to act like ChatGPT **but powered by your own documents**. Documents are ingested and converted to a vector database (ChromaDB by default), so the assistant answers questions from your custom knowledge base plus optional web search.
 
 This README is a ready-to-use guide for developers and administrators to install, configure, run, and extend ERAGA.
 
